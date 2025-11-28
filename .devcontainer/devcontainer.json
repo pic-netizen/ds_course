@@ -1,6 +1,11 @@
 {
-  "name": "Data Science Py3.8",
+  "name": "Data Science Py3.8 + Desktop",
   "image": "mcr.microsoft.com/devcontainers/python:3.8",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest"
+    }
+  },
   "customizations": {
     "vscode": {
       "settings": {
@@ -11,6 +16,12 @@
         "ms-toolsai.jupyter",
         "ms-python.vscode-pylance"
       ]
+    }
+  },
+  "portsAttributes": {
+    "6080": {
+      "label": "Desktop",
+      "onAutoForward": "notify"
     }
   },
   "postCreateCommand": "pip install --upgrade pip && pip install pandas numpy matplotlib seaborn scipy scikit-learn jupyter notebook ipykernel"
