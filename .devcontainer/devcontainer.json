@@ -1,0 +1,17 @@
+{
+  "name": "Data Science Py3.8",
+  "image": "mcr.microsoft.com/devcontainers/python:3.8",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install pandas numpy matplotlib seaborn scipy scikit-learn jupyter notebook ipykernel"
+}
